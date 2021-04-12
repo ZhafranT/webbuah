@@ -1,21 +1,11 @@
-
-  <div class="fixed-bottom custom-footer">
-      <div class="card text-center">
-        <div class="d-flex justify-content-center">
-          <div class="card-header">
-            <ul class="nav nav-pills card-header-pills">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Products</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Cart</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Order</a>
-              </li>
-            </ul>
-          </div> 
-        </div>
-      </div>
+<div class="card" style="clear: both">
+  <div class="card-header">
+    Quote
   </div>
-    
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div>

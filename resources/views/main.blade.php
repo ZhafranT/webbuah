@@ -45,14 +45,12 @@
     {
       float: left;
       width: 20%;
+      text-align: center;
     }
-    .all-products
+    .custom-product
     {
-      margin: 20px;
-    }
-    .custom-footer
-    {
-      padding-top: 25px;
+      padding-top: 20px;
+      padding-bottom: 70px !important;
     }
   </style>
 </html>

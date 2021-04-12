@@ -24,33 +24,28 @@
       </a>
     </div>
   </div>
-  
-  <div class="custom-btn">
-    <div class="d-flex justify-content-center">
-      <div role="group" class="btn-group btn-group-sm">
-        <button  type="button" class="btn btn-primary custom" style="margin-left: 10px">Semua Produck</button>
-        <button  type="button" class="btn btn-primary custom" style="margin-left: 10px">Buah</button>
-        <button  type="button" class="btn btn-primary custom" style="margin-left: 10px">Sayuran</button>
-      </div>
-    </div>
-  </div>
 
   <div class="container custom-product">
-    <div class="all-products">
-      <h2>All Product</h2>
-      @foreach ($products as $item)
-      <div class="item-product">
-        <img class="product-pic" src="{{$item['gallery']}}">
-        <div class="title title-center" >
-          <h5>{{$item['name']}}</h5>
+      <div class="all-products">
+        <h2>All Product</h2>
+        @foreach ($products as $item)
+        <div class="item-product">
+          <img class="product-pic" src="{{$item['gallery']}}">
+          <div class="title title-center" >
+            <h5>{{$item['name']}}</h5>
+            <h5>{{$item['price']}}</h5>
+          </div>
+          <div style="padding: 10px">
+            <form action="/addtocart" method="POST">
+              @csrf
+              <input type="hidden" name="product_id" value="{{$item['id']}}">
+              <button class="btn" style="background-color: #4CAF50;">BELI</button>
+            </form>
+          </div>
         </div>
+        @endforeach
       </div>
-      @endforeach
-    </div>
   </div>
+
 </div>
-
-
-
-
 @endsection

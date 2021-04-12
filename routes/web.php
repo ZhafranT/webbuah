@@ -19,4 +19,11 @@ use App\Http\Controllers\ProductController;
 Route::get('/', function () {
     return view('layout/product');
 });
-Route::get("/",[ProductController::class,"index"]);
+Route::get('/',[ProductController::class,'index']);
+Route::get("/search",[ProductController::class,'search']);
+Route::post("addtocart",[ProductController::class,'addToCart']);
+Route::get("cartlist",[ProductController::class,'cartList']);
+Route::get("removeitem/{id}",[ProductController::class,'removeItem']);
+Route::get("buynow",[ProductController::class,'buyNow']);
+Route::post("myorder",[ProductController::class,'myOrder']);
+
